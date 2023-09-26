@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <table>
+                <thead>
+                        <tr>
+                                <th colspan="6">The table of students in this year`s record</th>
+                        </tr>
+                </thead>
+
+                <tbody id="tb-body">
+                        <tr>
+                                <td>Rating</td>
+                                <td>First Name</td>
+                                <td>Last Name</td>
+                                <td>Gender</td>
+                                <td>Id</td>
+                                <td></td>
+                        </tr>
+
+                </tbody>
+        </table>
+        <button class="btn-add" onclick="openDialogWindow(1)">Add new student +</button>
+
+        <div class="window" id="dialogWindow">
+                <div class="btn-close" onclick="cancel()">
+                        <img src="cross.png" alt="close_window">
+                </div>
+                <p style="font-weight: bold; text-align: center;">Please, add parameters for create a student</p>
+                <label>Ad new number in rating:</label><br>
+                <input type="number" id="rating" placeholder="4, 5... 47...">
+                <br><label>Ad first name:</label><br>
+                <input type="text" id="firstName" placeholder="Dan">
+                <br><label>Ad last name:</label>
+                <br><input type="text" id="lastName" placeholder="Kravchenko">
+                <br><label>Specify gender:</label><br>
+                <div class="gender-input-wrapper">
+                        <label>Male</label><input type="checkbox" style="width: inherit;" id="genderMale" checked>
+                        <label>Female</label><input type="checkbox" style="width: inherit;" id="genderFemale" unchecked>
+                </div>
+                <label>Ad id of student:</label><br>
+                <input type="number" id="idStudent" placeholder="32 for example">
+
+                <div id="dialog-btns-add">
+                        <button class="btn-dialog" onclick="save()">Save</button>
+                        <button class="btn-dialog" onclick="cancel()">Cancel</button>
+                </div>
+
+                <div id="dialog-btns-change">
+                        <button class="btn-dialog" onclick="save()">Change data</button>
+                        <button class="btn-dialog" onclick="cancel()">Cancel</button>
+                </div>
+        </div>
+
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+
+</html>
